@@ -2,18 +2,16 @@ package com.kuryaevao.test.config;
 
 import org.aeonbits.owner.Config;
 
+@Config.Sources({"classpath:base.properties"})
 public interface BaseConfig extends Config {
 
     @Key("browser")
-    @DefaultValue("CHROME")
     String getBrowser();
 
     @Key("baseUrl")
-    @DefaultValue("https://devqa.io")
     String getBaseUrl();
 
     @Key("browserVersion")
-    @DefaultValue("113")
     String getBrowserVersion();
 
     @Key("pageLoadStrategy")
